@@ -3,9 +3,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('git clone') {
             steps {
-                hello ()
+                gitClone('main','git-cred','https://github.com/kotrarajender/microservice-one.git')
             }
         }
     }
